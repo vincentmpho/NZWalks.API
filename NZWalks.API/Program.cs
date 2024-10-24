@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using NZWalks.API.Data;
 using NZWalks.API.Profiles;
@@ -14,8 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //inject Fluent Validation
-builder.Services.
-    AddFluentValidation(options => options.RegisterValidatorsFromAssemblyContaining<Program>());
+builder.Services. AddFluentValidation(options => options.RegisterValidatorsFromAssemblyContaining<Program>());
 
 //inject/register connection string
 
